@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.View.CadastrarCultura"  
+             Title="Cadastrar Cultura"
+              BackgroundColor="#AADBB0">
+    <ScrollView>
+        <StackLayout>
+
+            <Image x:Name="imagen" Source="camera" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" Margin="0,20,0,0"/>
+
+            <StackLayout  Margin="10">
+                <Button x:Name="btnGaleria" Font="Bold,16" TextColor="White" Image="imgs_cadastrar.png" BackgroundColor="Green" Text="Minhas Imagens" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnSemImg" Font="Bold,16" TextColor="White" Image="apagar_cadastrar.png" BackgroundColor="Green" Text="Deletar Imagem" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Nome da cultura:" TextColor="Green" FontSize="25" />
+
+
+                <Entry x:Name ="Ent_nome" BackgroundColor="#4baf4f" Placeholder="Nome da cultura a ser adicionada" TextColor="White"  WidthRequest="250" Margin="4"/>
+
+
+                <Button x:Name="btnEnviar" Clicked="BtnEnviar_Clicked" Font="Bold,16" TextColor="White" BackgroundColor="Green" Text="Enviar" HorizontalOptions="Center"/>
+
+
+            </StackLayout>
+
+            <Label x:Name="labelStatus" Text="este é o texxto"/>
+
+            <Image x:Name="imgFoto" WidthRequest="800" HeightRequest="500"/>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

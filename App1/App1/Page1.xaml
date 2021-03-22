@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="App1.Page1"
+             Title="Iplant"
+             BackgroundColor="#AADBB0">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="sobre" Clicked="sobre_Clicked" Icon="sobre.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="0" >
+        
+        <StackLayout>
+            <Image x:Name="Banner" Source="banner.png"/>
+        </StackLayout>
+
+
+        <ScrollView>
+
+
+            <Grid RowSpacing="0"   >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <controls:CircleImage x:Name="CImg1" Source="btniniciar.png" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" BorderColor="White" BorderThickness="2"/>
+                <Button BackgroundColor="Transparent"  Grid.Row="0" Grid.Column="0"/>
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond"  Grid.Row="1" Grid.Column="0" Text="Iniciar Cultivo" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="CImg2" Source="btncad.png" Grid.Row="0" Grid.Column="1" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+                <Button BackgroundColor="Transparent"  Grid.Row="0" Grid.Column="1"/>
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="1" Grid.Column="1" Text="Cadastrar Cultivo" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="CImg3" Source="btncad.png" Grid.Row="2" Grid.Column="0" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+                <Button BackgroundColor="Transparent" Grid.Row="2" Grid.Column="0"/>
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="3" Grid.Column="0" Text="Minhas Culturas" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="CImg4" Source="btncomu.png" Grid.Row="2" Grid.Column="1" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+                <Button BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1"/>
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="3" Grid.Column="1" Text="Comunidade" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="CImg5" Source="btntutorial.png" Grid.Row="4" Grid.Column="0" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+                <Button BackgroundColor="Transparent" Grid.Row="4" Grid.Column="0" Clicked="BtnTutorial_Clicked" />
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="5" Grid.Column="0" Text="Tutoriais" TextColor="#18943D" HorizontalOptions="Center"/>
+
+
+                <controls:CircleImage x:Name="CImg6" Source="btnconf.png" Grid.Row="4" Grid.Column="1" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+                <Button BackgroundColor="Transparent" Grid.Row="4" Grid.Column="1"  HorizontalOptions="Center" />
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="5" Grid.Column="1" Text="Configurações" TextColor="#18943D" HorizontalOptions="Center"/>
+            </Grid>
+
+        </ScrollView>
+    </StackLayout>
+
+
+</ContentPage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+              Title="Iplant"
+             BackgroundColor="#AADBB0"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="App1.View.Principal">
+
+
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem x:Name="sobre" Text="Sobre" Order="Secondary"  Clicked="sobre_Clicked"  Icon="sobre.png"></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+<StackLayout Padding="0" >
+        
+
+        
+            <Image x:Name="Banner" Source="banner.png"/>
+
+        <ScrollView>
+
+
+            <Grid RowSpacing="0"   >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <controls:CircleImage x:Name="img_iniciar_cultivo" Source="btniniciar.png" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" BorderColor="White" BorderThickness="2"/>
+
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond"  Grid.Row="1" Grid.Column="0" Text="Iniciar Cultivo" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="img_cadastrar_cultura" Source="btncad.png" Grid.Row="0" Grid.Column="1" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+              
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="1" Grid.Column="1" Text="Cadastrar Cultivo" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="img_minhas_culturas" Source="btncad.png" Grid.Row="2" Grid.Column="0" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="3" Grid.Column="0" Text="Minhas Culturas" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="CImg4" Source="btncomu.png" Grid.Row="2" Grid.Column="1" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+               
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="3" Grid.Column="1" Text="Comunidade" TextColor="#18943D" HorizontalOptions="Center"/>
+
+                <controls:CircleImage x:Name="CImg5" Source="btntutorial.png" Grid.Row="4" Grid.Column="0" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+               
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="5" Grid.Column="0" Text="Tutoriais" TextColor="#18943D" HorizontalOptions="Center"/>
+
+
+                <controls:CircleImage x:Name="CImg6" Source="btnconf.png" Grid.Row="4" Grid.Column="1" HeightRequest="90" WidthRequest="90" BorderColor="White" BorderThickness="2"/>
+
+                <Label Font="Bold,19" FontFamily="Franklin Gothic Medium Cond" Grid.Row="5" Grid.Column="1" Text="Configurações" TextColor="#18943D" HorizontalOptions="Center"/>
+            </Grid>
+
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>

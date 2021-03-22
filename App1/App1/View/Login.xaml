@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.Login"
+             BackgroundColor="#008b5e"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid x:Name="GridPai">
+
+
+        <StackLayout>
+            <StackLayout>
+                <Image x:Name="Banner" Source="iplant.png"/>
+            </StackLayout>
+            <StackLayout Margin="0,0,0,34">
+                <Label Text="Conecte sua conta" TextColor="White" Font="Bond, 25" FontFamily="Franklin Gothic Medium Cond" HorizontalOptions="Center" VerticalOptions="Center" Margin="10" />
+
+
+                <local:RoudedEntry x:Name ="Entry_usuario" Placeholder="Entrar" TextColor="Black"  WidthRequest="250" Margin="4" Text="Olá"/>
+
+
+
+                <local:RoudedEntry IsPassword="True" x:Name ="Entry_senha"  Placeholder="Senha" TextColor="Black" WidthRequest="250" Margin="4"></local:RoudedEntry>
+
+
+                <Button x:Name="btnEntrar" Text="Entrar" TextColor="White" Clicked="btnEntrar_Clicked" BackgroundColor="#00544b" WidthRequest="150" HorizontalOptions="Center" Margin="10"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="#00544b" HeightRequest="70" WidthRequest="300">
+                <Label Text="Criar nova conta" TextColor="White" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10,0,10" />
+            </StackLayout>
+        </StackLayout>
+        
+        
+    </Grid>
+
+</ContentPage>

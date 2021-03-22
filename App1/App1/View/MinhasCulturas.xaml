@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.View.MinhasCulturas"
+             BackgroundColor="White"
+           >
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="Lv_Culturas"  HasUnevenRows="True" CachingStrategy="RecycleElement" ItemSelected="Lv_Culturas_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#FAFAFA" 
+                                 Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding img}" HeightRequest="120" WidthRequest="120" Margin="10"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding nome}"      
+                                    TextColor="DarkGreen" FontSize="Large" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding nome}"      
+                                    TextColor="DarkGreen" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+ 
+
+</ContentPage>
